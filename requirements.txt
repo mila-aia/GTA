@@ -1,4 +1,12 @@
-matplotlib == 3.1.1
-numpy == 1.19.4
-pandas == 0.25.1
-scikit_learn == 0.21.3
+matplotlib #==3.1.1
+numpy #==1.19.4
+pandas #==0.25.1
+scikit-learn #==0.21.3
+torch==1.13.1
+torchvision #==0.13.1
+torchaudio #==0.14.1
+
+pyg_lib
+torch_scatter
+torch_sparse
+torch-geometric

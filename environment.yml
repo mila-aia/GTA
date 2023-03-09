@@ -1,0 +1,9 @@
+name: gta
+dependencies:
+  - python=3.10.9
+  - jupyterlab
+  - rope
+  - pip
+  - pip:
+    - -f https://data.pyg.org/whl/torch-1.13.1+cu117.html
+    - -r requirements.txt

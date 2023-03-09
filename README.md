@@ -1,20 +1,13 @@
 # Setup the computing environment
-```shell
-# Conda Installation
-wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
-bash miniconda.sh -b -p $HOME/miniconda
-source "$HOME/miniconda/etc/profile.d/conda.sh"
-hash -r
-conda config --set always_yes yes --set changeps1 no
-conda update -q conda
-conda info -a
-# Create the environment
-conda create -n <name> python=3.8
-conda activate <name>
-# Install independencies
-pip install -r requirements.txt
+
+1. Download and install the latest [Anaconda Python distribution](https://www.anaconda.com/distribution/#download-section)
+2. Execute the following commands to install all software requirements:
 ```
-This repo is built upon **Pytorch** (deep neural networks) and **PytorchGeometrics** (graph learning). For [PyTorch](https://pytorch.org) and [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html) installation, please follow the guide from the websites. Make sure you install the matched the version of Pytorch for PyG.
+cd GTA
+conda env create
+```
+
+Note: This repo is built upon **Pytorch** (deep neural networks) and **PytorchGeometrics** (graph learning). For [PyTorch](https://pytorch.org) and [PyG](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html) installation, please follow the guide from the websites. Make sure you install the matched the version of Pytorch for PyG.
 
 # Transformer benchmark architecture (Informer -> AAAI'21 best paper)
 Our GTA's **Transformer** architecture is built on top of [**Informer**](https://github.com/zhouhaoyi/Informer2020) who won the best paper award of AAAI'21. One may refer to the link to receive more details.
@@ -23,6 +16,10 @@ Our GTA's **Transformer** architecture is built on top of [**Informer**](https:/
 For training of GTA for deep anomaly detection (dad), please refer to `main_gta_dad.py` for more information.
 We also provided a more detailed and complete cli description for training the model:
 ```
+
+cd GTA
+conda activate gta
+
 python -u main_gta_dad.py --model <model> --data <data>
 --root_path <root_path> --data_path <data_path> --features <features>
 --target <target> --freq <freq> --checkpoints <checkpoints>
