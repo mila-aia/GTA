@@ -61,7 +61,7 @@ if args.data in data_parser.keys():
     data_info = data_parser[args.data]
     args.data_path = data_info['data']
     args.target = data_info['T']
-    args.num_nodes = data_info[args.features]
+    # args.num_nodes = data_info[args.features]
 
 Exp = Exp_GTA_DAD
 
